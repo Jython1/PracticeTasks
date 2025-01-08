@@ -9,6 +9,7 @@ int main()
     cin >> firstValue;
     cout << "Enter max number: ";
     cin >> lastValue;
+    
 
     if(firstValue > lastValue)
     {
