@@ -9,9 +9,10 @@ int* NumbGuesser::makeArray(int firstValue, int lastValue)
 
     int arrSize = lastValue-firstValue+1;
     int *arrayValues = new int[arrSize];
-    for(int i = firstValue; i <= lastValue; i++)
+    for(int i = 0; i < arrSize; i++)
     {
-        arrayValues[i] = firstValue + i;
+        arrayValues[i] = firstValue;
+        firstValue++;
     }
     return arrayValues;
 }
@@ -33,7 +34,7 @@ void NumbGuesser::guessNumber(int arr[], int arraySize)
         if(newArrSize < 3) 
         {
             cout << "Finally, You number is " << arr[0] << endl;
-            cout << "I used only " << attemptsCounter << " attempt(s) to guess.";
+            cout << "I used only " << attemptsCounter << " attempt(s) to guess." << endl;
             return;
         }
         
@@ -51,7 +52,7 @@ void NumbGuesser::guessNumber(int arr[], int arraySize)
         int newArrSize = middleArrIndex + 1;
                 if(newArrSize < 3) 
         {
-            cout << "Finally, You number is " << arr[0] << endl;
+            cout << "Finally, You number is " << arr[1] << endl;
             cout << "I used only " << attemptsCounter << " attempt(s) to guess.";
             return;
         }

@@ -20,17 +20,7 @@ int main()
     {
         NumbGuesser arr;
         int *firstArray = arr.makeArray(firstValue, lastValue);
-        
         int arraySize = lastValue-firstValue+1;
-
-        /*
-        for(int i = 0; i < arraySize; i++)
-        {
-            cout << firstArray[i] << endl;
-        }
-
-        !!!program still in development and it may work incorrectly
-        */
         arr.guessNumber(firstArray, arraySize);
     }
 
