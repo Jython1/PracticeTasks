@@ -1,28 +1,20 @@
 #include <iostream>
-#include "binarySearch.cpp"
+#include "linkedList.cpp"
 
 int main()
 {
 
-    int firstValue, lastValue;
-    cout << "Enter min number: ";
-    cin >> firstValue;
-    cout << "Enter max number: ";
-    cin >> lastValue;
-    
+    LinkedList<int> lst1;
+    lst1.insertAtHead(1);
+    lst1.insertAtHead(2);
+    lst1.insertAtHead(3);
+    lst1.insertAtHead(4);
+    //std::cout << lst1.GetSize() << std::endl;
 
-    if(firstValue > lastValue)
+    for(int i=0; i<lst1.GetSize(); i++)
     {
-        cout << "Wrong values of numbers. First number can't be greater than second one!";
-        
-    }
-    else
-    {
-        NumbGuesser arr;
-        int *firstArray = arr.makeArray(firstValue, lastValue);
-        int arraySize = lastValue-firstValue+1;
-        arr.guessNumber(firstArray, arraySize);
+        std::cout << lst1[i] << std::endl;
     }
 
-    
+    return 0;
 }
