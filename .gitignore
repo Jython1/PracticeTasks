@@ -1,0 +1,14 @@
+
+*.o
+*.obj
+*.exe
+*.out
+*.log
+*.tmp
+*.gch
+*.pch
+
+
+build/
+bin/
+
